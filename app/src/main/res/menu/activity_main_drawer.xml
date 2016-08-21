@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="Opções">
+            <menu>
+                <item
+                    android:id="@+id/nav_opt1"
+                    android:title="Opção 1" />
+                <item
+                    android:id="@+id/nav_opt2"
+                    android:title="Opção 2" />
+
+ig"
+            </menu>
+        </item>
+    </group>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/go_to_phone_00177"
+        android:title="Logout" />
+</menu>

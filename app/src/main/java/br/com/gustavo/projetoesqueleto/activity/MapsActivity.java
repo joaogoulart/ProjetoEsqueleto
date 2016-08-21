@@ -42,6 +42,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
         return new TaskListener() {
             @Override
             public Object execute() throws Exception {
+
                 return null;
             }
 

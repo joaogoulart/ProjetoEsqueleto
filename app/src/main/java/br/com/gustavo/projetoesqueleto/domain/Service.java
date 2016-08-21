@@ -13,7 +13,7 @@ import br.com.gustavo.projetoesqueleto.utils.HttpHelper;
  */
 public class Service {
 
-    public String URL = "http://tradesniffer-env.sa-east-1.elasticbeanstalk.com/rest/";
+    public static String URL = "http://tradesniffer-env.sa-east-1.elasticbeanstalk.com/rest/";
 
     public List<Empresas> getEmpresas(Pais pais) throws IOException {
         HttpHelper httpHelper = new HttpHelper();
@@ -24,6 +24,19 @@ public class Service {
         Gson gson = new Gson();
         List<Empresas> list =  gson.fromJson(json, new TypeToken<List<Empresas>>() {
         }.getType());
+        return list;
+    }
+
+    public static List<Produto> getProdutos() throws IOException {
+        HttpHelper httpHelper = new HttpHelper();
+        httpHelper.setContentType("application/json");
+
+        String json = httpHelper.doGet(URL + "produto/getProdutos");
+
+        Gson gson = new Gson();
+        List<Produto> list =  gson.fromJson(json, new TypeToken<List<Empresas>>() {
+        }.getType());
+
         return list;
     }
 

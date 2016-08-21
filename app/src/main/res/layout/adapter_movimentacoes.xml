@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardDestino"
@@ -5,38 +6,37 @@
     android:layout_height="wrap_content"
     android:layout_margin="3dp"
     android:background="#FFFFFF"
-    android:gravity="center_vertical"
     android:orientation="vertical"
     card_view:cardElevation="3dp"
     card_view:cardPreventCornerOverlap="false"
     card_view:cardUseCompatPadding="false">
 
-
     <LinearLayout
-        android:id="@+id/lDestino"
+        android:id="@+id/lItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:orientation="vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="18dp">
 
         <TextView
+            android:id="@+id/tTexto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Nome"
-            android:textColor="#000000"
-            android:id="@+id/tvNomeDestino"
-            android:layout_margin="5dp" />
+            android:text="Argentina"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/tPreco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Categoria"
-            android:id="@+id/tvCategoriaDestino"
-            android:layout_margin="5dp" />
+            android:text="Argentina"
+            android:textSize="14sp" />
 
     </LinearLayout>
-
-
 </android.support.v7.widget.CardView>

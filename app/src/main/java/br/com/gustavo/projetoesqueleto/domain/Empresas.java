@@ -1,10 +1,12 @@
 package br.com.gustavo.projetoesqueleto.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by joao_ on 20/08/2016.
  */
 
-public class Empresas {
+public class Empresas implements Serializable {
 
     //ID,NOME,PAIS,PRODUTO,CIDADE,TELEFONE,LAT,LNG
     public String nome;

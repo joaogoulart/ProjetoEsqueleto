@@ -6,15 +6,10 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
-
 
 import br.com.gustavo.projetoesqueleto.R;
 
@@ -70,24 +65,6 @@ public class MainActivity extends BaseActivity implements  NavigationView.OnNavi
 
     public void setupNavDrawer(NavigationView.OnNavigationItemSelectedListener listener)
         {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            toggle.syncState();
-
-            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(listener);
-            navigationView.setCheckedItem(R.id.nav_logout);
-
-            View headerLayout = navigationView.getHeaderView(0);
-
-            tNome = (TextView) headerLayout.findViewById(R.id.tNome);
-            imgUser = (ImageView) headerLayout.findViewById(R.id.imgUser);
-
-        }
         }
 
 

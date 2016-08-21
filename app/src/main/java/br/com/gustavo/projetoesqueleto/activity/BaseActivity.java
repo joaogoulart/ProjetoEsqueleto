@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,7 +29,7 @@ import br.com.gustavo.projetoesqueleto.utils.ActivityEffectFactory;
 /**
  * Created by Gustavo on 10/05/2016.
  */
-public class BaseActivity extends livroandroid.lib.activity.BaseActivity
+public class BaseActivity extends AppCompatActivity
     {
     private Map<String, AsyncTask> tasks = new HashMap<String, AsyncTask>();
     private ProgressDialog progress;

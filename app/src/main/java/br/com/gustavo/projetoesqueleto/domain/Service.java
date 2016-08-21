@@ -15,7 +15,7 @@ public class Service {
 
     public static String URL = "http://tradesniffer-env.sa-east-1.elasticbeanstalk.com/rest/";
 
-    public List<Empresas> getEmpresas(Pais pais) throws IOException {
+    public static List<Empresas> getEmpresas(Pais pais) throws IOException {
         HttpHelper httpHelper = new HttpHelper();
         httpHelper.setContentType("application/json");
 
@@ -34,10 +34,20 @@ public class Service {
         String json = httpHelper.doGet(URL + "produto/getProdutos");
 
         Gson gson = new Gson();
-        List<Produto> list =  gson.fromJson(json, new TypeToken<List<Empresas>>() {
+        List<Produto> list =  gson.fromJson(json, new TypeToken<List<Produto>>() {
         }.getType());
 
         return list;
     }
 
+    public static BalancaDTO getPaises(Produto produto) throws IOException {
+        HttpHelper httpHelper = new HttpHelper();
+        httpHelper.setContentType("application/json");
+
+        String json = httpHelper.doGet(URL + "pais/getRankingPaises/" + produto.getNcm());
+
+        Gson gson = new Gson();
+        BalancaDTO balancaDTO = gson.fromJson(json, BalancaDTO.class);
+        return balancaDTO;
+    }
 }

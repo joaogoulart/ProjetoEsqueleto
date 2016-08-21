@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -20,12 +21,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import br.com.gustavo.projetoesqueleto.utils.ActivityEffectFactory;
-import livroandroid.lib.fragment.DebugFragment;
 
 /**
  * Created by Gustavo on 10/05/2016.
  */
-public class BaseFragment extends DebugFragment
+public class BaseFragment extends Fragment
 {
 
     private Map<String, Task> tasks = new HashMap<String, Task>();
@@ -428,7 +428,7 @@ public class BaseFragment extends DebugFragment
     }
 
     protected void log(String msg) {
-        Log.d(TAG, msg);
+        Log.d("teste", msg);
     }
 
     public android.support.v7.app.ActionBar getActionBar() {

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ProjetoEsqueleto</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
